@@ -31,11 +31,13 @@ const deleteRoundFailure = () => {
 }
 
 const updateRoundSuccess = () => {
+  $('.update-round').trigger('reset')
   $('#message').text('Successfully updated your previous round!').removeClass().addClass('success').show()
   $('.rounds-display').empty()
 }
 
 const updateRoundFailure = () => {
+  $('.update-round').trigger('reset')
   $('#message').text('You are not the owner of this round!').removeClass().addClass('failure').show()
 }
 
