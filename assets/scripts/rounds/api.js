@@ -22,7 +22,7 @@ const indexRounds = () => {
   })
 }
 
-const deleteRound = (roundId) => {
+const deleteRound = roundId => {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/rounds/' + roundId,
@@ -32,8 +32,27 @@ const deleteRound = (roundId) => {
   })
 }
 
+const updateRound = formData => {
+  console.log(formData.round)
+  console.log(formData.round.roundID)
+  console.log(formData.round.score)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/rounds/' + formData.round.roundID,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      round: {
+        score: formData.round.score
+      }
+    }
+  })
+}
+
 module.exports = {
   createRound,
   indexRounds,
-  deleteRound
+  deleteRound,
+  updateRound
 }

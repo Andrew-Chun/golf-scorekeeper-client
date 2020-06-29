@@ -29,14 +29,28 @@ const onDeleteRound = event => {
   api.deleteRound(roundId)
     .then(() => {
       $('.rounds-display').empty()
+      $('#message').text('Succesfully delete a round!').removeClass().addClass('success').show()
       onIndexRounds(event)
     })
     .catch(ui.deleteRoundFailure)
+}
+
+const onUpdateRound = event => {
+  event.preventDefault()
+
+  const data = getFormData(event.target)
+
+  console.log(data)
+
+  api.updateRound(data)
+    .then(ui.updateRoundSuccess)
+    .catch(ui.updateRoundFailure)
 }
 
 module.exports = {
   onCreateRound,
   onIndexRounds,
   onClearRounds,
-  onDeleteRound
+  onDeleteRound,
+  onUpdateRound
 }

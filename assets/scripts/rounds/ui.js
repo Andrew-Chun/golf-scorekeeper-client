@@ -30,11 +30,22 @@ const deleteRoundFailure = () => {
   $('#message').text('You are not the owner of this round!').removeClass().addClass('failure').show()
 }
 
+const updateRoundSuccess = () => {
+  $('#message').text('Successfully updated your previous round!').removeClass().addClass('success').show()
+  $('.rounds-display').empty()
+}
+
+const updateRoundFailure = () => {
+  $('#message').text('You are not the owner of this round!').removeClass().addClass('failure').show()
+}
+
 module.exports = {
   createRoundSuccess,
   createRoundFailure,
   indexRoundSuccess,
   indexRoundFailure,
   clearRounds,
-  deleteRoundFailure
+  deleteRoundFailure,
+  updateRoundSuccess,
+  updateRoundFailure
 }
