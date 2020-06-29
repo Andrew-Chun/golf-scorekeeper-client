@@ -12,6 +12,7 @@ $(() => {
   $('.create-round').on('submit', roundEvents.onCreateRound)
   $('.index-rounds').on('click', roundEvents.onIndexRounds)
   $('.clear-rounds').on('click', roundEvents.onClearRounds)
+  $('.rounds-display').on('click', '.delete-round', roundEvents.onDeleteRound)
 
   $('.change-pw').hide()
   $('.sign-out').hide()

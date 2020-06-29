@@ -1,6 +1,6 @@
 {{#each rounds as |round|}}
 {{log round}}
-<section data-id="{{round.id}}">
+<section data-id="{{round._id}}">
   <h6>Course:</h6>
   <h3>
     {{limit round.course 15}}
@@ -11,6 +11,7 @@
   <h3>
     {{round.score}}
   </h3>
+  <button class="btn btn-danger delete-round" data-id="{{round._id}}">Remove round</button>
 </section>
 
 {{/each}}

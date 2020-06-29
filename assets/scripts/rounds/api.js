@@ -22,7 +22,18 @@ const indexRounds = () => {
   })
 }
 
+const deleteRound = (roundId) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/rounds/' + roundId,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createRound,
-  indexRounds
+  indexRounds,
+  deleteRound
 }

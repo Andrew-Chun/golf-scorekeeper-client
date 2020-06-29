@@ -22,8 +22,21 @@ const onClearRounds = event => {
   ui.clearRounds()
 }
 
+const onDeleteRound = event => {
+  const roundId = event.target.getAttribute('data-id')
+  console.log(event.target)
+  console.log(roundId)
+  api.deleteRound(roundId)
+    .then(() => {
+      $('.rounds-display').empty()
+      onIndexRounds(event)
+    })
+    .catch(ui.deleteRoundFailure)
+}
+
 module.exports = {
   onCreateRound,
   onIndexRounds,
-  onClearRounds
+  onClearRounds,
+  onDeleteRound
 }

@@ -22,7 +22,12 @@ const indexRoundFailure = () => {
 }
 
 const clearRounds = () => {
+  $('#message').empty()
   $('.rounds-display').empty()
+}
+
+const deleteRoundFailure = () => {
+  $('#message').text('You are not the owner of this round!').removeClass().addClass('failure').show()
 }
 
 module.exports = {
@@ -30,5 +35,6 @@ module.exports = {
   createRoundFailure,
   indexRoundSuccess,
   indexRoundFailure,
-  clearRounds
+  clearRounds,
+  deleteRoundFailure
 }
