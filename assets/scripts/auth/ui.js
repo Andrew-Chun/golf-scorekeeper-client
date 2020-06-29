@@ -31,11 +31,21 @@ const changePwFailure = () => {
   $('#message').text('Password change failure.').removeClass().addClass('failure').show()
 }
 
+const signOutSuccess = () => {
+  $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
+}
+
+const signOutFailure = () => {
+  $('#message').text('Sign Out failure.').removeClass().addClass('failure').show()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   changePwSuccess,
-  changePwFailure
+  changePwFailure,
+  signOutSuccess,
+  signOutFailure
 }
