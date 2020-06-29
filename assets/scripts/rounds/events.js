@@ -12,6 +12,13 @@ const onCreateRound = event => {
     .catch(ui.createRoundFailure)
 }
 
+const onIndexRounds = event => {
+  api.indexRounds()
+    .then(ui.indexRoundSuccess)
+    .catch(ui.indexRoundFailure)
+}
+
 module.exports = {
-  onCreateRound
+  onCreateRound,
+  onIndexRounds
 }

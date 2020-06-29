@@ -12,6 +12,17 @@ const createRound = formData => {
   })
 }
 
+const indexRounds = () => {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/rounds',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  createRound
+  createRound,
+  indexRounds
 }
