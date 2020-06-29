@@ -17,6 +17,7 @@ const signInSuccess = responseData => {
   $('.sign-in').hide()
   $('.change-pw').show()
   $('.sign-out').show()
+  $('.create-round').show()
   store.user = responseData.user
 }
 
@@ -41,6 +42,7 @@ const signOutSuccess = () => {
   $('.sign-in').show()
   $('.change-pw').hide()
   $('.sign-out').hide()
+  $('.create-round').hide()
 }
 
 const signOutFailure = () => {
