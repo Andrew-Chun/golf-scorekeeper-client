@@ -12,11 +12,7 @@ const signUpFailure = function () {
 
 const signInSuccess = responseData => {
   $('form').trigger('reset')
-  $('.forms').hide()
   $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
-  $('#new-game').show()
-  $('.dropdown-toggle').text(responseData.user.email)
-  $('#user-actions').show()
   store.user = responseData.user
 }
 
@@ -25,9 +21,21 @@ const signInFailure = () => {
   $('#message').text('Sign in failure.').removeClass().addClass('failure')
 }
 
+const changePwSuccess = () => {
+  $('form').trigger('reset')
+  $('#message').text(`Password changed successfully!`).removeClass().addClass('success').show()
+}
+
+const changePwFailure = () => {
+  $('form').trigger('reset')
+  $('#message').text('Password change failure.').removeClass().addClass('failure').show()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePwSuccess,
+  changePwFailure
 }
