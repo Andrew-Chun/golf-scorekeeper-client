@@ -1,1 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+
+$success-color: #090;
+$failure-color: #f00;
+
+.success {
+  color: $success-color;
+}
+
+.failure {
+  color: $failure-color;
+}
