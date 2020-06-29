@@ -11,9 +11,11 @@ $(() => {
 
   $('.create-round').on('submit', roundEvents.onCreateRound)
   $('.index-rounds').on('click', roundEvents.onIndexRounds)
+  $('.clear-rounds').on('click', roundEvents.onClearRounds)
 
   $('.change-pw').hide()
   $('.sign-out').hide()
   $('.create-round').hide()
   $('.index-rounds').hide()
+  $('.clear-rounds').hide()
 })

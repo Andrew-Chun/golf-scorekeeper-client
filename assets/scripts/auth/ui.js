@@ -19,6 +19,7 @@ const signInSuccess = responseData => {
   $('.sign-out').show()
   $('.create-round').show()
   $('.index-rounds').show()
+  $('.clear-rounds').show()
   store.user = responseData.user
 }
 
@@ -45,6 +46,7 @@ const signOutSuccess = () => {
   $('.sign-out').hide()
   $('.create-round').hide()
   $('.index-rounds').hide()
+  $('.clear-rounds').hide()
 }
 
 const signOutFailure = () => {

@@ -21,9 +21,14 @@ const indexRoundFailure = () => {
   $('#message').text('Failed to retrieve previous rounds.').removeClass().addClass('failure').show()
 }
 
+const clearRounds = () => {
+  $('.rounds-display').empty()
+}
+
 module.exports = {
   createRoundSuccess,
   createRoundFailure,
   indexRoundSuccess,
-  indexRoundFailure
+  indexRoundFailure,
+  clearRounds
 }
