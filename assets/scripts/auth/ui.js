@@ -13,9 +13,7 @@ const signUpFailure = function () {
 const signInSuccess = responseData => {
   $('.sign-in').trigger('reset')
   $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
-  $('.sign-up').hide()
-  $('.sign-in').hide()
-  $('.sign-in-toggle').hide()
+  $('.log-in-forms').hide()
   $('.cg-pw-toggle').show()
   $('.sign-out').show()
   $('.crud-action-buttons').show()
@@ -39,8 +37,7 @@ const changePwFailure = () => {
 
 const signOutSuccess = () => {
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
-  $('.sign-up').show()
-  $('.sign-in-toggle').show()
+  $('.log-in-forms').show()
   $('.cg-pw-toggle').hide()
   $('.sign-out').hide()
   $('.crud-action-buttons').hide()
