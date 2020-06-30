@@ -14,9 +14,7 @@ const signInSuccess = responseData => {
   $('.sign-in').trigger('reset')
   $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
   $('.log-in-forms').hide()
-  $('.cg-pw-toggle').show()
-  $('.sign-out').show()
-  $('.crud-action-buttons').show()
+  $('.navbar').show()
   store.user = responseData.user
 }
 
@@ -39,9 +37,7 @@ const signOutSuccess = () => {
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
   $('.log-in-forms').show()
   $('#collapseSignIn').collapse('hide')
-  $('.cg-pw-toggle').hide()
-  $('.sign-out').hide()
-  $('.crud-action-buttons').hide()
+  $('.navbar').hide()
   $('#collapseCreate').collapse('hide')
   $('#collapseUpdate').collapse('hide')
   $('#collapseChangePw').collapse('hide')

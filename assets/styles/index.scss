@@ -2,6 +2,11 @@
 
 $success-color: #090;
 $failure-color: #f00;
+$body-background-color: #fff5ee;
+
+body {
+  background-color: $body-background-color;
+}
 
 #message {
   text-align: center;
@@ -16,6 +21,7 @@ $failure-color: #f00;
 }
 
 h1 {
+  font-size: 75px;
   text-align: center;
 }
 
@@ -27,14 +33,6 @@ h1 {
     text-align: right;
   }
 }
-
-.change-pw-log-out-btns {
-  text-align: right;
-}
-
-// .crud-action-buttons {
-//
-// }
 
 .rounds-display {
   display: flex;

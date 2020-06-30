@@ -14,6 +14,19 @@
     <body>
       <h1>Golf Scorekeeper</h1>
 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" data-toggle="collapse" href="#collapseCreate" role="button">Create New Round</a>
+            <a class="nav-item nav-link" data-toggle="collapse" href="#collapseUpdate" role="button">Update Previous Round</a>
+            <a class="nav-item nav-link index-rounds" role="button">View All Rounds</a>
+            <a class="nav-item nav-link clear-rounds" role="button">Clear Rounds</a>
+            <a class="nav-item nav-link" data-toggle="collapse" href="#collapseChangepw" role="button">Change Password</a>
+            <a class="nav-item nav-link sign-out" role="button">Log Out</a>
+          </div>
+        </div>
+      </nav>
+
       <p id="message"></p>
 
       <div class="log-in-forms">
@@ -59,10 +72,10 @@
         </div>
       </div>
 
-      <p class="change-pw-log-out-btns">
+      <!-- <p class="change-pw-log-out-btns">
         <button class="btn btn-secondary cg-pw-toggle" type="button" data-toggle="collapse" data-target="#collapseChangePw">Change Password</button>
         <button class="btn btn-danger sign-out" type="button">Log Out</button>
-      </p>
+      </p> -->
 
       <div class="collapse" id="collapseChangePw">
         <div class="card card-body">
@@ -77,12 +90,12 @@
         </div>
       </div>
 
-      <p class="crud-action-buttons">
+      <!-- <p class="crud-action-buttons">
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCreate">Create New Round</button>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseUpdate">Update Previous Round</button>
-        <button class="btn btn-info index-rounds" type="button">View All Previous Rounds</button>
+        <button class="btn btn-info index-rounds" type="button">View All Rounds</button>
         <button class="btn btn-info clear-rounds" type="button">Clear Rounds</button>
-      </p>
+      </p> -->
 
         <div class="collapse" id="collapseCreate">
           <div class="card card-body">
