@@ -15,10 +15,7 @@ $(() => {
   $('.rounds-display').on('click', '.delete-round', roundEvents.onDeleteRound)
   $('.update-round').on('submit', roundEvents.onUpdateRound)
 
-  $('.change-pw').hide()
+  $('.cg-pw-toggle').hide()
   $('.sign-out').hide()
-  $('.create-round').hide()
-  $('.index-rounds').hide()
-  $('.clear-rounds').hide()
-  $('.update-round').hide()
+  $('.crud-action-buttons').hide()
 })

@@ -15,12 +15,10 @@ const signInSuccess = responseData => {
   $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
   $('.sign-up').hide()
   $('.sign-in').hide()
-  $('.change-pw').show()
+  $('.sign-in-toggle').hide()
+  $('.cg-pw-toggle').show()
   $('.sign-out').show()
-  $('.create-round').show()
-  $('.index-rounds').show()
-  $('.clear-rounds').show()
-  $('.update-round').show()
+  $('.crud-action-buttons').show()
   store.user = responseData.user
 }
 
@@ -42,13 +40,10 @@ const changePwFailure = () => {
 const signOutSuccess = () => {
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
   $('.sign-up').show()
-  $('.sign-in').show()
-  $('.change-pw').hide()
+  $('.sign-in-toggle').show()
+  $('.cg-pw-toggle').hide()
   $('.sign-out').hide()
-  $('.create-round').hide()
-  $('.index-rounds').hide()
-  $('.clear-rounds').hide()
-  $('.update-round').hide()
+  $('.crud-action-buttons').hide()
 }
 
 const signOutFailure = () => {
