@@ -14,7 +14,7 @@ const indexRoundSuccess = (responseData) => {
   console.log(responseData)
   $('#message').text('Successfully retrieved your previous rounds!').removeClass().addClass('success').show()
   const showRoundsHtml = showRoundsTemplate({rounds: responseData.rounds})
-  $('.rounds-display').append(showRoundsHtml)
+  $('.rounds-display').html(showRoundsHtml)
 }
 
 const indexRoundFailure = () => {
