@@ -16,7 +16,6 @@
 
       <p id="message"></p>
 
-
       <div class="log-in-forms">
         <div class="card card-body">
           <form class="sign-up">
@@ -60,7 +59,6 @@
         </div>
       </div>
 
-
       <p>
         <button class="btn btn-secondary cg-pw-toggle" type="button" data-toggle="collapse" data-target="#collapseChangePw">Change Password</button>
         <button class="btn btn-danger sign-out" type="button">Log Out</button>
@@ -86,44 +84,44 @@
         <button class="btn btn-info clear-rounds" type="button">Clear Rounds</button>
       </p>
 
-      <div class="collapse" id="collapseCreate">
-        <div class="card card-body">
-          <form class="create-round">
-            <h4>Create New Round</h4>
-              <div class="form-group">
-                <label>Course:</label>
-                <input type="text" class="form-control" name="round[course]" placeholder="Ex: Pebble Beach">
-              </div>
-              <div class="form-group">
-                <label>Date:</label>
-                <input type="text" class="form-control" name="round[date]" placeholder="Ex: 1/1/2020">
-              </div>
-              <div class="form-group">
-                <label>Score:</label>
-                <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
-              </div>
-              <button type="submit" class="btn btn-info">Submit</button>
-          </form>
+        <div class="collapse" id="collapseCreate">
+          <div class="card card-body">
+            <form class="create-round">
+              <h4>Create New Round</h4>
+                <div class="form-group">
+                  <label>Course:</label>
+                  <input type="text" class="form-control" name="round[course]" placeholder="Ex: Pebble Beach">
+                </div>
+                <div class="form-group">
+                  <label>Date:</label>
+                  <input type="text" class="form-control" name="round[date]" placeholder="Ex: 1/1/2020">
+                </div>
+                <div class="form-group">
+                  <label>Score:</label>
+                  <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="collapse" id="collapseUpdate">
-        <div class="card card-body">
-          <form class="update-round">
-            <h4>Update Previous Round</h4>
-            <p>In order to update a previous round, simply view your previous rounds and copy/paste your RoundID below:</p>
-              <div class="form-group">
-                <label>RoundID:</label>
-                <input type="text" class="form-control" name="round[roundID]" placeholder="Ex: 5ef9f82481dff367a1705123">
-              </div>
-              <div class="form-group">
-                <label>Updated Score:</label>
-                <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
-              </div>
-              <button type="submit" class="btn btn-info">Submit</button>
-          </form>
+        <div class="collapse" id="collapseUpdate">
+          <div class="card card-body">
+            <form class="update-round">
+              <h4>Update Previous Round</h4>
+              <p>In order to update a previous round, simply view your previous rounds and copy/paste your RoundID below:</p>
+                <div class="form-group">
+                  <label>RoundID:</label>
+                  <input type="text" class="form-control" name="round[roundID]" placeholder="Ex: 5ef9f82481dff367a1705123">
+                </div>
+                <div class="form-group">
+                  <label>Updated Score:</label>
+                  <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
 
       <div class="rounds-display"></div>
 

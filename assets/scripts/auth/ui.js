@@ -38,9 +38,14 @@ const changePwFailure = () => {
 const signOutSuccess = () => {
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
   $('.log-in-forms').show()
+  $('#collapseSignIn').collapse('hide')
   $('.cg-pw-toggle').hide()
   $('.sign-out').hide()
   $('.crud-action-buttons').hide()
+  $('#collapseCreate').collapse('hide')
+  $('#collapseUpdate').collapse('hide')
+  $('#collapseChangePw').collapse('hide')
+  $('.rounds-display').empty()
 }
 
 const signOutFailure = () => {
