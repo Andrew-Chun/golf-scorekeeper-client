@@ -3,10 +3,46 @@
 $success-color: #090;
 $failure-color: #f00;
 
+#message {
+  text-align: center;
+}
+
 .success {
   color: $success-color;
 }
 
 .failure {
   color: $failure-color;
+}
+
+h1 {
+  text-align: center;
+}
+
+.log-in-forms {
+  margin: 0 auto;
+  width: 50%;
+
+  >.sign-in-toggle {
+    text-align: right;
+  }
+}
+
+.change-pw-log-out-btns {
+  text-align: right;
+}
+
+// .crud-action-buttons {
+//
+// }
+
+.rounds-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  section {
+    border: 1px solid;
+    border-radius: 10px;
+  }
 }
