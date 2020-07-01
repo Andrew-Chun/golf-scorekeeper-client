@@ -1,5 +1,7 @@
 const showRoundsTemplate = require('./../templates/round-listing.handlebars')
 
+let removeButtonClicked = false
+
 const createRoundSuccess = () => {
   $('.create-round').trigger('reset')
   $('#message').text('Successfully added a new round the database!').removeClass().addClass('success').show()
@@ -11,9 +13,14 @@ const createRoundFailure = () => {
 }
 
 const indexRoundSuccess = (responseData) => {
-  $('#message').text('Successfully retrieved your previous rounds!').removeClass().addClass('success').show()
   const showRoundsHtml = showRoundsTemplate({rounds: responseData.rounds})
   $('.rounds-display').html(showRoundsHtml)
+  if (removeButtonClicked) {
+    removeButtonClicked = false
+    return $('#message').text('Successfully deleted your previous round!').removeClass().addClass('success').show()
+  } else {
+    $('#message').text('Successfully retrieved your previous rounds!').removeClass().addClass('success').show()
+  }
 }
 
 const indexRoundFailure = () => {
@@ -26,10 +33,9 @@ const clearRounds = () => {
 }
 
 const deleteRoundSuccess = () => {
+  removeButtonClicked = true
   $('.rounds-display').empty()
   $('.index-rounds').trigger('click')
-  // need to figure out how to display message below
-  $('#message').text('Successfully deleted your previous round!').removeClass().addClass('success').show()
 }
 
 const deleteRoundFailure = () => {
