@@ -24,14 +24,9 @@ const onClearRounds = event => {
 
 const onDeleteRound = event => {
   const roundId = event.target.getAttribute('data-id')
-  console.log(event.target)
-  console.log(roundId)
+
   api.deleteRound(roundId)
-    .then(() => {
-      $('.rounds-display').empty()
-      $('#message').text('Succesfully delete a round!').removeClass().addClass('success').show()
-      onIndexRounds(event)
-    })
+    .then(ui.deleteRoundSuccess)
     .catch(ui.deleteRoundFailure)
 }
 

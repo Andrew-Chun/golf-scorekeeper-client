@@ -11,7 +11,6 @@ const createRoundFailure = () => {
 }
 
 const indexRoundSuccess = (responseData) => {
-  console.log(responseData)
   $('#message').text('Successfully retrieved your previous rounds!').removeClass().addClass('success').show()
   const showRoundsHtml = showRoundsTemplate({rounds: responseData.rounds})
   $('.rounds-display').html(showRoundsHtml)
@@ -24,6 +23,13 @@ const indexRoundFailure = () => {
 const clearRounds = () => {
   $('#message').empty()
   $('.rounds-display').empty()
+}
+
+const deleteRoundSuccess = () => {
+  $('.rounds-display').empty()
+  $('.index-rounds').trigger('click')
+  // need to figure out how to display message below
+  $('#message').text('Successfully deleted your previous round!').removeClass().addClass('success').show()
 }
 
 const deleteRoundFailure = () => {
@@ -48,6 +54,7 @@ module.exports = {
   indexRoundFailure,
   clearRounds,
   deleteRoundFailure,
+  deleteRoundSuccess,
   updateRoundSuccess,
   updateRoundFailure
 }
