@@ -11,6 +11,7 @@ curl "${API}${URL_PATH}" \
       "course": "'"${COURSE}"'",
       "location": "'"${LOCATION}"'",
       "date": "'"${DATE}"'",
+      "par": "'"${PAR}"'",
       "score": "'"${SCORE}"'"
     }
   }'

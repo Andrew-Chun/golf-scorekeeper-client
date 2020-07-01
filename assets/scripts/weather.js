@@ -24,10 +24,10 @@ const getWeatherSuccess = (responseData) => {
   $('.weather').trigger('reset')
   console.log(responseData)
   const city = responseData.name
-  const temp = responseData.main.temp
-  const temp2 = responseData.main.feels_like
+  const temp = parseInt(responseData.main.temp)
+  const temp2 = parseInt(responseData.main.feels_like)
   const description = responseData.weather[0].description
-  $('.display-weather').text(`Currently in ${city} it's ${temp} degrees F and feels like ${temp2} degrees F with ${description}.`)
+  $('.display-weather').html(`Currently in ${city} it's ${temp} &#8457 and feels like ${temp2} &#8457 with ${description}.`)
   $('#message').text('').removeClass().addClass('success').show()
 }
 

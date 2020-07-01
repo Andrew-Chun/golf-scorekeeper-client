@@ -4,8 +4,9 @@
     <h6>Course: {{limit round.course 20}}</h6>
     <h6>Location: {{limit round.location 20}}</h6>
     <h6>Date: {{round.date}}</h6>
+    <h6>Par: {{round.par}}</h6>
     <h6>Score: {{round.score}}</h6>
-    <h6>Owner: {{round.owner.name}}</h6>
+    <!-- <h6>Owner: {{round.owner.name}}</h6> -->
     <h6>RoundID: {{round._id}}</h6>
     <button class="btn btn-danger delete-round" data-id="{{round._id}}">Remove</button>
   </section>

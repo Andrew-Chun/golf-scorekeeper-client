@@ -4,6 +4,7 @@ let removeButtonClicked = false
 
 const createRoundSuccess = () => {
   $('.create-round').trigger('reset')
+  $('.collapseCreateBtn').trigger('click')
   $('#message').text('Successfully added a new round the database!').removeClass().addClass('success').show()
 }
 
@@ -24,7 +25,7 @@ const indexRoundSuccess = (responseData) => {
 }
 
 const indexRoundFailure = () => {
-  $('#message').text('Failed to retrieve previous rounds.').removeClass().addClass('failure').show()
+  $('#message').text('Failed to retrieve previous rounds from the database.').removeClass().addClass('failure').show()
 }
 
 const clearRounds = () => {
@@ -44,6 +45,7 @@ const deleteRoundFailure = () => {
 
 const updateRoundSuccess = () => {
   $('.update-round').trigger('reset')
+  $('.collapseUpdateBtn').trigger('click')
   $('#message').text('Successfully updated your previous round!').removeClass().addClass('success').show()
   $('.rounds-display').empty()
 }
