@@ -2,6 +2,7 @@
 
 const authEvents = require('./auth/events')
 const roundEvents = require('./rounds/events')
+const weather = require('./weather')
 
 $(() => {
   $('.sign-up').on('submit', authEvents.onSignUp)
@@ -14,6 +15,8 @@ $(() => {
   $('.clear-rounds').on('click', roundEvents.onClearRounds)
   $('.rounds-display').on('click', '.delete-round', roundEvents.onDeleteRound)
   $('.update-round').on('submit', roundEvents.onUpdateRound)
+
+  $('.weather').on('submit', weather)
 
   $('.navbar').hide()
 })

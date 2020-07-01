@@ -34,12 +34,16 @@
               <a class="nav-item nav-link clear-rounds" role="button">Clear Rounds</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="nav-item nav-link" data-toggle="collapse" href="#collapseChangePw" role="button">Change Password</a>
-            <a class="nav-item nav-link sign-out" role="button">Log Out</a>
+          <form class="form-inline my-2 my-lg-0 weather">
+            <input class="form-control mr-sm-2" type="text" name="city" placeholder="City Name">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
+          <a class="nav-item nav-link" data-toggle="collapse" href="#collapseChangePw" role="button">Change Password</a>
+          <a class="nav-item nav-link sign-out" role="button">Log Out</a>
         </div>
       </nav>
+
+      <p class="display-weather"></p>
 
       <p id="message"></p>
 
@@ -98,11 +102,6 @@
         </div>
       </div>
 
-      <!-- <p class="change-pw-log-out-btns">
-        <button class="btn btn-secondary cg-pw-toggle" type="button" data-toggle="collapse" data-target="#collapseChangePw">Change Password</button>
-        <button class="btn btn-danger sign-out" type="button">Log Out</button>
-      </p> -->
-
       <div class="collapse" id="collapseChangePw">
         <div class="card card-body">
           <form class="change-pw">
@@ -116,51 +115,44 @@
         </div>
       </div>
 
-      <!-- <p class="crud-action-buttons">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCreate">Create New Round</button>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseUpdate">Update Previous Round</button>
-        <button class="btn btn-info index-rounds" type="button">View All Rounds</button>
-        <button class="btn btn-info clear-rounds" type="button">Clear Rounds</button>
-      </p> -->
-
-        <div class="collapse" id="collapseCreate">
-          <div class="card card-body">
-            <form class="create-round">
-              <h4>Create New Round</h4>
-                <div class="form-group">
-                  <label>Course:</label>
-                  <input type="text" class="form-control" name="round[course]" placeholder="Ex: Pebble Beach">
-                </div>
-                <div class="form-group">
-                  <label>Date:</label>
-                  <input type="text" class="form-control" name="round[date]" placeholder="Ex: 1/1/2020">
-                </div>
-                <div class="form-group">
-                  <label>Score:</label>
-                  <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
-                </div>
-                <button type="submit" class="btn btn-info">Submit</button>
-            </form>
-          </div>
+      <div class="collapse" id="collapseCreate">
+        <div class="card card-body">
+          <form class="create-round">
+            <h4>Create New Round</h4>
+              <div class="form-group">
+                <label>Course:</label>
+                <input type="text" class="form-control" name="round[course]" placeholder="Ex: Pebble Beach">
+              </div>
+              <div class="form-group">
+                <label>Date:</label>
+                <input type="text" class="form-control" name="round[date]" placeholder="Ex: 1/1/2020">
+              </div>
+              <div class="form-group">
+                <label>Score:</label>
+                <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
+              </div>
+              <button type="submit" class="btn btn-info">Submit</button>
+          </form>
         </div>
+      </div>
 
-        <div class="collapse" id="collapseUpdate">
-          <div class="card card-body">
-            <form class="update-round">
-              <h4>Update Previous Round</h4>
-              <p>In order to update a previous round, simply view your previous rounds and copy/paste your RoundID below:</p>
-                <div class="form-group">
-                  <label>RoundID:</label>
-                  <input type="text" class="form-control" name="round[roundID]" placeholder="Ex: 5ef9f82481dff367a1705123">
-                </div>
-                <div class="form-group">
-                  <label>Updated Score:</label>
-                  <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
-                </div>
-                <button type="submit" class="btn btn-info">Submit</button>
-            </form>
-          </div>
+      <div class="collapse" id="collapseUpdate">
+        <div class="card card-body">
+          <form class="update-round">
+            <h4>Update Previous Round</h4>
+            <p>In order to update a previous round, simply view your previous rounds and copy/paste your RoundID below:</p>
+              <div class="form-group">
+                <label>RoundID:</label>
+                <input type="text" class="form-control" name="round[roundID]" placeholder="Ex: 5ef9f82481dff367a1705123">
+              </div>
+              <div class="form-group">
+                <label>Updated Score:</label>
+                <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
+              </div>
+              <button type="submit" class="btn btn-info">Submit</button>
+          </form>
         </div>
+      </div>
 
       <div class="rounds-display"></div>
 
