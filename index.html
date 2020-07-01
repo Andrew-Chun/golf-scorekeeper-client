@@ -34,8 +34,10 @@
               <a class="nav-item nav-link clear-rounds" role="button">Clear Rounds</a>
             </li>
           </ul>
+
           <form class="form-inline my-2 my-lg-0 weather">
-            <input class="form-control mr-sm-2" type="text" name="city" placeholder="City Name">
+            <label>Weather Information: </label>
+            <input class="form-control mr-sm-2" type="text" name="city" placeholder="Enter City">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
           <a class="nav-item nav-link" data-toggle="collapse" href="#collapseChangePw" role="button">Change Password</a>
@@ -60,8 +62,10 @@
               <input type="number" class="form-control" name="credentials[age]" placeholder="Age">
             </div>
             <div class="form-group">
-              <label>Gender</label>
-              <input type="text" class="form-control" name="credentials[gender]" placeholder="M or F">
+              <input type="radio" id="male" name="credentials[gender]" value="male">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="credentials[gender]" value="female">
+              <label for="female">Female</label><br>
             </div>
             <div class="form-group">
               <label>Email address</label>
@@ -122,6 +126,10 @@
               <div class="form-group">
                 <label>Course:</label>
                 <input type="text" class="form-control" name="round[course]" placeholder="Ex: Pebble Beach">
+              </div>
+              <div class="form-group">
+                <label>Location:</label>
+                <input type="text" class="form-control" name="round[location]" placeholder="Ex: Atlanta, GA">
               </div>
               <div class="form-group">
                 <label>Date:</label>
