@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://golf-scorekeeper-api.herokuapp.com/',
+  production: 'https://golf-scorekeeper-api.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
