@@ -7,7 +7,19 @@
     <h6>Par: {{round.par}}</h6>
     <h6>Score: {{round.score}}</h6>
     <!-- <h6>Owner: {{round.owner.name}}</h6> -->
-    <h6>RoundID: {{round._id}}</h6>
+    <!-- <h6>RoundID: {{round._id}}</h6> -->
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapse{{round._id}}">Update</button>
+    <div class="collapse" id="collapse{{round._id}}">
+      <div class="card card-body">
+        <form class="update-round" data-id="{{round._id}}">
+            <div class="form-group">
+              <label>Update Score:</label>
+              <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+    </div>
     <button class="btn btn-danger delete-round" data-id="{{round._id}}">Remove</button>
   </section>
 

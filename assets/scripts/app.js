@@ -14,7 +14,8 @@ $(() => {
   $('.index-rounds').on('click', roundEvents.onIndexRounds)
   $('.clear-rounds').on('click', roundEvents.onClearRounds)
   $('.rounds-display').on('click', '.delete-round', roundEvents.onDeleteRound)
-  $('.update-round').on('submit', roundEvents.onUpdateRound)
+  $('.rounds-display').on('submit', '.update-round', roundEvents.onUpdateRound)
+  // $('.update-round').on('submit', roundEvents.onUpdateRound)
 
   $('.weather').on('submit', weather)
 

@@ -33,11 +33,14 @@ const onDeleteRound = event => {
 const onUpdateRound = event => {
   event.preventDefault()
 
+  const roundId = event.target.getAttribute('data-id')
   const data = getFormData(event.target)
 
+  console.log(event.target)
   console.log(data)
+  console.log(roundId)
 
-  api.updateRound(data)
+  api.updateRound(data, roundId)
     .then(ui.updateRoundSuccess)
     .catch(ui.updateRoundFailure)
 }

@@ -42,6 +42,7 @@ const signOutSuccess = () => {
   $('#collapseUpdate').collapse('hide')
   $('#collapseChangePw').collapse('hide')
   $('.rounds-display').empty()
+  $('.display-weather').empty()
 }
 
 const signOutFailure = () => {

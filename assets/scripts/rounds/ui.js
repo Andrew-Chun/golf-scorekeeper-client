@@ -1,6 +1,7 @@
 const showRoundsTemplate = require('./../templates/round-listing.handlebars')
 
 let removeButtonClicked = false
+let updateButtonClicked = false
 
 const createRoundSuccess = () => {
   $('.create-round').trigger('reset')
@@ -19,6 +20,9 @@ const indexRoundSuccess = (responseData) => {
   if (removeButtonClicked) {
     removeButtonClicked = false
     return $('#message').text('Successfully deleted your previous round!').removeClass().addClass('success').show()
+  } else if (updateButtonClicked) {
+    updateButtonClicked = false
+    return $('#message').text('Successfully updated your previous round!').removeClass().addClass('success').show()
   } else {
     $('#message').text('Successfully retrieved your previous rounds!').removeClass().addClass('success').show()
   }
@@ -44,10 +48,10 @@ const deleteRoundFailure = () => {
 }
 
 const updateRoundSuccess = () => {
+  updateButtonClicked = true
   $('.update-round').trigger('reset')
-  $('.collapseUpdateBtn').trigger('click')
-  $('#message').text('Successfully updated your previous round!').removeClass().addClass('success').show()
   $('.rounds-display').empty()
+  $('.index-rounds').trigger('click')
 }
 
 const updateRoundFailure = () => {
