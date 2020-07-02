@@ -13,9 +13,10 @@ A user-friendly front-end application that allows golfers to CRUD their rounds o
 
 ## User Stories
 1) As a user, I want to be able to securely sign up, sign in, change password, and sign out
-2) As a user, I want to be able to create, show, update, and delete scores
-3) As a user, I want to be able to view other golfer's scores
-4) As a user, I want to be able to find my handicap
+2) As a user, I want to be able to create a round
+3) As a user, I want to be able to update a round
+4) As a user, I want to be able to delete a round
+3) As a user, I want to be able to view all previous rounds
 
 ## Wireframe
 

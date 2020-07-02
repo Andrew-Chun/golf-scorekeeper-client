@@ -1,8 +1,6 @@
 const getFormData = require('./../../lib/get-form-fields')
 
 const apiKey = 'f84477b003b7eefe272782b58af26f4b'
-// let city = 'Atlanta'
-// let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
 
 const weather = (event) => {
   event.preventDefault()
@@ -16,13 +14,12 @@ const weather = (event) => {
 const getWeather = (city) => {
   return $.ajax({
     method: 'GET',
-    url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
   })
 }
 
 const getWeatherSuccess = (responseData) => {
   $('.weather').trigger('reset')
-  console.log(responseData)
   const city = responseData.name
   const temp = parseInt(responseData.main.temp)
   const temp2 = parseInt(responseData.main.feels_like)

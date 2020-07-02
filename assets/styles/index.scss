@@ -25,8 +25,11 @@ body {
 }
 
 h1 {
+  font-family: 'Shrikhand', cursive;
   font-size: 75px;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .log-in-forms {
@@ -37,10 +40,6 @@ h1 {
     text-align: right;
   }
 }
-
-// nav {
-//   background-color: #e3f2fd;
-// }
 
 .rounds-display {
   display: flex;
