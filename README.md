@@ -25,13 +25,13 @@ Additionally, users can find relevant weather information by searching for their
 [Golf Wireframe](https://i.imgur.com/iaTWBA0.jpg)
 
 ## Planning and Development Process
-In order to meet the requirements for the MVP for this project, I focused on
+- In order to meet the requirements for the MVP for this project, I focused on
 one user being able to CRUD many rounds of golf.
-Before making HTTP requests to the server, I tested curl-scripts.
-Once a user was authentication, I worked on CRUD routes for the rounds of golf,
+- Before making HTTP requests to the server, I tested curl-scripts.
+- Once a user was authentication, I worked on CRUD routes for the rounds of golf,
 using handlebars to render the rounds to the page.
-Beyond the MVP, I utilized a 3rd party API (openweathermap.org) to allow users to
-view the weather for their given city .
+- Beyond the MVP, I utilized a 3rd party API (openweathermap.org) to allow users to
+view the weather for their given city.
 
 ## Future Iterations
 Allow interactions between different authenticated users
