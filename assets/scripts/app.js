@@ -16,7 +16,6 @@ $(() => {
   $('.rounds-display').on('click', '.delete-round', roundEvents.onDeleteRound)
   $('.rounds-display').on('submit', '.update-round', roundEvents.onUpdateRound)
 
-
   $('.weather').on('submit', weather)
 
   $('.navbar').hide()

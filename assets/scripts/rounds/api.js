@@ -33,9 +33,6 @@ const deleteRound = roundId => {
 }
 
 const updateRound = (formData, roundId) => {
-  console.log(formData.round)
-  console.log(formData.round.roundID)
-  console.log(formData.round.score)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/rounds/' + roundId,
