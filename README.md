@@ -5,8 +5,8 @@ A user-friendly front-end application that allows golfers to keep track of their
 Additionally, users can find relevant weather information by searching for their city.
 
 ## Links
-Deployed Client Application: https://andrew-chun.github.io/golf-scorekeeper-client/
-Heroku API: https://golf-scorekeeper-api.herokuapp.com/
+- Deployed Client Application: https://andrew-chun.github.io/golf-scorekeeper-client/
+- Heroku API: https://golf-scorekeeper-api.herokuapp.com/
 
 ## Technologies Used
 - JavaScript
