@@ -2,11 +2,12 @@
 
 $success-color: #090;
 $failure-color: #f00;
-$body-background-color: #fff5ee;
+// $body-background-color: #fff5ee;
+$title-color: #389E0D;
 
-body {
-  background-color: $body-background-color;
-}
+// body {
+//   background-color: $body-background-color;
+// }
 
 #message {
   text-align: center;
@@ -25,11 +26,13 @@ body {
 }
 
 h1 {
-  font-family: 'Shrikhand', cursive;
-  font-size: 75px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: $title-color;
 }
 
 .log-in-forms {
@@ -44,10 +47,11 @@ h1 {
 .rounds-display {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 
   section {
     border: 1px solid;
     border-radius: 10px;
+    width: 250px;
   }
 }
