@@ -2,12 +2,8 @@
 
 $success-color: #090;
 $failure-color: #f00;
-// $body-background-color: #fff5ee;
 $title-color: #389E0D;
-
-// body {
-//   background-color: $body-background-color;
-// }
+$card-background-color: #F5F5F5;
 
 #message {
   text-align: center;
@@ -44,14 +40,58 @@ h1 {
   }
 }
 
-.rounds-display {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  width: 1500px;
 
-  section {
-    border: 1px solid;
-    border-radius: 10px;
-    width: 250px;
+  .col-md-3 {
+    background: $card-background-color;
+    border-radius: 2px;
+    border: 1px solid black;
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    h4 {
+      font-size: 15px;
+      text-align: center;
+      border-bottom: solid 1px gray;
+    }
+    h6 {
+      font-size: 12px;
+      text-align: center;
+    }
+    label {
+      text-align: center;
+    }
+    .edit {
+      margin-left: 100px;
+    }
+    .submit {
+      margin-left: 65px;
+    }
+    .delete-round {
+      margin-top: 10px;
+      border-top: 1px solid gray;
+
+      button {
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+    }
   }
+}
+
+#collapseChangePw {
+  padding-left: 25vw;
+  padding-right: 25vw;
+}
+
+#collapseCreate {
+  padding-left: 25vw;
+  padding-right: 25vw;
 }

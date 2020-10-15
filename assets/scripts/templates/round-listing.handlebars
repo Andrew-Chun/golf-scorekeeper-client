@@ -1,12 +1,12 @@
 {{#each rounds as |round|}}
 
-  <section data-id="{{round._id}}">
-    <h6>Course: {{limit round.course 20}}</h6>
-    <h6>Location: {{limit round.location 20}}</h6>
+  <div class="col-md-3" data-id="{{round._id}}">
+    <h2>{{limit round.course 40}}</h2>
+    <h4>{{limit round.location 40}}</h4>
     <h6>Date: {{round.date}}</h6>
     <h6>Par: {{round.par}}</h6>
     <h6>Score: {{round.score}}</h6>
-    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapse{{round._id}}">Update</button>
+    <button class="btn btn-info edit" type="button" data-toggle="collapse" data-target="#collapse{{round._id}}">Edit</button>
     <div class="collapse" id="collapse{{round._id}}">
       <div class="card card-body">
         <form class="update-round" data-id="{{round._id}}">
@@ -14,11 +14,14 @@
               <label>Update Score:</label>
               <input type="text" class="form-control" name="round[score]" placeholder="Ex: 72">
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info submit">Submit</button>
         </form>
+        <div class="delete-round">
+          <button class="btn btn-danger" data-id="{{round._id}}">Delete Round</button>
+        </div>
       </div>
     </div>
-    <button class="btn btn-danger delete-round" data-id="{{round._id}}">Remove</button>
-  </section>
+
+  </div>
 
 {{/each}}
